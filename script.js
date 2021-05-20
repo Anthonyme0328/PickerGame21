@@ -18,12 +18,26 @@ function myFunction() {
 
 let choices = [1, 2, 3, 4, 5]
 
-let gen = function numberGeneration() {
-  Math.floor(Math.random() * (5 - 1) + 1)
+let answer;
+
+function numberGeneration() {
+ answer = Math.floor(Math.random() * (5) + 1)
+ console.log(answer)
+ return answer
 }
+
+
+
+
 
 function picker (){
- console.log(choices.map(gen))
+ if (answer === 1){
+   console.log('winner')
+ }
+  
 }
 
+
+
 picker();
+numberGeneration();
